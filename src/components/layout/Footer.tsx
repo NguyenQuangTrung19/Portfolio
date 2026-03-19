@@ -1,9 +1,12 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram, MessageCircle, Facebook } from "lucide-react";
 import { socialLinks } from "@/data/social";
 
 const socialIconMap: Record<string, React.ReactNode> = {
   Github: <Github size={16} />,
   Linkedin: <Linkedin size={16} />,
+  Facebook: <Facebook size={16} />,
+  Instagram: <Instagram size={16} />,
+  MessageCircle: <MessageCircle size={16} />,
   Mail: <Mail size={16} />,
 };
 

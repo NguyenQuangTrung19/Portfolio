@@ -6,11 +6,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ExternalLink, Github } from "lucide-react";
 import TypingEffect from "@/components/ui/TypingEffect";
 
-const HeroScene = dynamic(() => import("@/components/three/HeroScene"), {
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
 });
-
-
 
 const titleWords = ["Hi,", "I'm"];
 const nameChars = "Quang Trung".split("");
@@ -65,8 +63,12 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid"
     >
-      {/* 3D Background Scene */}
-      <HeroScene />
+      {/* Spline Earth — outer clips watermark, inner is taller */}
+      <div className="absolute inset-0 z-[1] overflow-hidden">
+        <div className="w-full" style={{ height: "calc(100% + 60px)" }}>
+          <Spline scene="https://prod.spline.design/3iA1dAtAXJwTeVIe/scene.splinecode" />
+        </div>
+      </div>
 
       {/* Ambient orbs with parallax */}
       <div

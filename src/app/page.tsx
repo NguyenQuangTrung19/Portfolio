@@ -7,7 +7,8 @@ import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/layout/Footer";
 import ChatBot from "@/components/chat/ChatBot";
 import FloatingRobot from "@/components/three/FloatingRobot";
-import Starfield from "@/components/ui/Starfield";
+import FloatingCharacter from "@/components/three/FloatingCharacter";
+import GlobalBackground from "@/components/ui/GlobalBackground";
 import CustomCursor from "@/components/ui/CustomCursor";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import SectionDivider from "@/components/ui/SectionDivider";
@@ -17,7 +18,7 @@ export default function Home() {
     <>
       <LoadingScreen />
       <CustomCursor />
-      <Starfield />
+      <GlobalBackground />
       <Navbar />
       <main>
         <HeroSection />
@@ -32,6 +33,7 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingRobot />
+      <FloatingCharacter />
       <ChatBot />
     </>
   );

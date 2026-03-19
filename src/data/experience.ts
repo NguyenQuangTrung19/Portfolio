@@ -24,6 +24,14 @@ export const certifications: Certification[] = [
     name: "APTIS English Certificate",
     detail: "Score: 154/200",
   },
+  {
+    name: "Agile Development & Scrum Framework",
+    detail: "TechBase Viet Nam Course 2024",
+  },
+  {
+    name: "Certificate of Attendance",
+    detail: "Chinese Culture University — 72-hour IT Study Program",
+  },
 ];
 
 export const languages = [

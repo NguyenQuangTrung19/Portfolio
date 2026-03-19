@@ -16,6 +16,21 @@ export const socialLinks: SocialLink[] = [
     icon: "Linkedin",
   },
   {
+    name: "Facebook",
+    url: "https://www.facebook.com/nguyen.quang.trung.774877",
+    icon: "Facebook",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/nwantrung/",
+    icon: "Instagram",
+  },
+  {
+    name: "Zalo",
+    url: "https://zalo.me/0914652363",
+    icon: "MessageCircle",
+  },
+  {
     name: "Email",
     url: "mailto:nqt123456123@gmail.com",
     icon: "Mail",

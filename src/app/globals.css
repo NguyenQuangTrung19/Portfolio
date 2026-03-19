@@ -8,14 +8,14 @@
   --bg-card-hover: #151530;
   --bg-glass: rgba(15, 15, 35, 0.7);
 
-  --text-primary: #e4e4f0;
-  --text-secondary: #8888a8;
-  --text-muted: #555570;
+  --text-primary: #f0f0ff;
+  --text-secondary: #a0a0c8;
+  --text-muted: #6a6a90;
 
-  --accent-primary: #6c5ce7;
-  --accent-secondary: #00cec9;
-  --accent-glow: #a78bfa;
-  --accent-warm: #fd79a8;
+  --accent-primary: #7c6cf7;
+  --accent-secondary: #00e5df;
+  --accent-glow: #b99cff;
+  --accent-warm: #ff8ab5;
 
   --border-subtle: rgba(108, 92, 231, 0.15);
   --border-hover: rgba(108, 92, 231, 0.35);
@@ -238,8 +238,8 @@ body {
   animation: twinkle ease-in-out infinite;
 }
 
+
 /* ===== Hide Spline watermark ===== */
-#spline-watermark,
 a[href*="spline.design"] {
   display: none !important;
 }

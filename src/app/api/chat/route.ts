@@ -1,4 +1,4 @@
-import { anthropic } from "@ai-sdk/anthropic";
+import { groq } from "@ai-sdk/groq";
 import { streamText } from "ai";
 import { systemPrompt } from "@/lib/system-prompt";
 
@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const result = streamText({
-    model: anthropic("claude-3-5-haiku-latest"),
+    model: groq("llama-3.3-70b-versatile"),
     system: systemPrompt,
     messages,
     maxOutputTokens: 500,
