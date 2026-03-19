@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { Send, Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { contactInfo, socialLinks } from "@/data/social";
@@ -15,6 +16,11 @@ import {
   lineReveal,
   viewport,
 } from "@/lib/animations";
+
+const ContactDecor3D = dynamic(
+  () => import("@/components/three/SectionDecor3D").then((m) => m.ContactDecor3D),
+  { ssr: false }
+);
 
 const socialIconMap: Record<string, React.ReactNode> = {
   Github: <Github size={18} />,
@@ -45,6 +51,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative py-24 sm:py-32">
+      <ContactDecor3D />
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <motion.div

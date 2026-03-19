@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 import { GraduationCap, Award, MapPin, Plane } from "lucide-react";
+import TiltCard from "@/components/ui/TiltCard";
 import { education, certifications, activities } from "@/data/experience";
 import {
   staggerContainer,
@@ -12,9 +14,15 @@ import {
   viewport,
 } from "@/lib/animations";
 
+const ExperienceDecor3D = dynamic(
+  () => import("@/components/three/SectionDecor3D").then((m) => m.ExperienceDecor3D),
+  { ssr: false }
+);
+
 export default function ExperienceSection() {
   return (
     <section id="experience" className="relative py-24 sm:py-32">
+      <ExperienceDecor3D />
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <motion.div
@@ -41,14 +49,13 @@ export default function ExperienceSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Education */}
+          <TiltCard>
           <motion.div
             initial={{ opacity: 0, x: -50, rotateY: 5 }}
             whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={viewport}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            whileHover={{ y: -4, transition: { duration: 0.25 } }}
-            className="glass-card p-6 sm:p-8"
-            style={{ perspective: "800px" }}
+            className="glass-card p-6 sm:p-8 h-full"
           >
             <div className="flex items-center gap-3 mb-6">
               <motion.div
@@ -101,8 +108,10 @@ export default function ExperienceSection() {
               </motion.div>
             </div>
           </motion.div>
+          </TiltCard>
 
           {/* Certifications */}
+          <TiltCard>
           <motion.div
             initial={{ opacity: 0, x: 50, rotateY: -5 }}
             whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
@@ -112,9 +121,7 @@ export default function ExperienceSection() {
               delay: 0.15,
               ease: [0.16, 1, 0.3, 1],
             }}
-            whileHover={{ y: -4, transition: { duration: 0.25 } }}
-            className="glass-card p-6 sm:p-8"
-            style={{ perspective: "800px" }}
+            className="glass-card p-6 sm:p-8 h-full"
           >
             <div className="flex items-center gap-3 mb-6">
               <motion.div
@@ -165,6 +172,7 @@ export default function ExperienceSection() {
               ))}
             </div>
           </motion.div>
+          </TiltCard>
 
           {/* Activities */}
           <motion.div

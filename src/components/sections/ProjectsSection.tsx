@@ -1,9 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, ChevronRight } from "lucide-react";
 import { projects, categories, type Project } from "@/data/projects";
+import TiltCard from "@/components/ui/TiltCard";
+
+const ProjectsDecor3D = dynamic(
+  () => import("@/components/three/SectionDecor3D").then((m) => m.ProjectsDecor3D),
+  { ssr: false }
+);
 import {
   staggerContainer,
   fadeUp,
@@ -14,6 +21,7 @@ import {
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
+    <TiltCard>
     <motion.div
       layout
       initial={{ opacity: 0, y: 60, scale: 0.9, rotateX: 5 }}
@@ -24,12 +32,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         delay: index * 0.1,
         ease: [0.16, 1, 0.3, 1],
       }}
-      whileHover={{
-        y: -8,
-        transition: { duration: 0.3, ease: "easeOut" },
-      }}
-      className="glass-card p-6 group flex flex-col"
-      style={{ perspective: "800px" }}
+      className="glass-card p-6 group flex flex-col h-full"
     >
       {/* Category badge */}
       <div className="flex items-center justify-between mb-4">
@@ -114,6 +117,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         ))}
       </div>
     </motion.div>
+    </TiltCard>
   );
 }
 
@@ -127,6 +131,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="relative py-24 sm:py-32">
+      <ProjectsDecor3D />
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <motion.div

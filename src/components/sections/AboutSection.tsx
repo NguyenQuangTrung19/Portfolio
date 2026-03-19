@@ -1,6 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+import TiltCard from "@/components/ui/TiltCard";
+
+const AboutDecor3D = dynamic(
+  () => import("@/components/three/SectionDecor3D").then((m) => m.AboutDecor3D),
+  { ssr: false }
+);
 import {
   Globe,
   Smartphone,
@@ -34,6 +41,7 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function AboutSection() {
   return (
     <section id="about" className="relative py-24 sm:py-32">
+      <AboutDecor3D />
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header with line reveal */}
         <motion.div
@@ -130,8 +138,8 @@ export default function AboutSection() {
             className="lg:col-span-3 grid sm:grid-cols-2 gap-4"
           >
             {skillCategories.map((cat, i) => (
+              <TiltCard key={cat.title}>
               <motion.div
-                key={cat.title}
                 variants={{
                   hidden: {
                     opacity: 0,
@@ -150,11 +158,7 @@ export default function AboutSection() {
                     },
                   },
                 }}
-                whileHover={{
-                  y: -4,
-                  transition: { duration: 0.25, ease: "easeOut" },
-                }}
-                className="glass-card p-5 group cursor-default"
+                className="glass-card p-5 group cursor-default h-full"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
@@ -188,6 +192,7 @@ export default function AboutSection() {
                   ))}
                 </div>
               </motion.div>
+              </TiltCard>
             ))}
           </motion.div>
         </div>

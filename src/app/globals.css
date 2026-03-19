@@ -227,3 +227,19 @@ body {
   border: 1px solid rgba(108, 92, 231, 0.25);
   border-radius: var(--radius-md);
 }
+
+/* ===== Starfield twinkle animation ===== */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-twinkle {
+  animation: twinkle ease-in-out infinite;
+}
+
+/* ===== Hide Spline watermark ===== */
+#spline-watermark,
+a[href*="spline.design"] {
+  display: none !important;
+}

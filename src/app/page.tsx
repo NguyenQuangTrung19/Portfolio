@@ -6,10 +6,13 @@ import ExperienceSection from "@/components/sections/ExperienceSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/layout/Footer";
 import ChatBot from "@/components/chat/ChatBot";
+import FloatingRobot from "@/components/three/FloatingRobot";
+import Starfield from "@/components/ui/Starfield";
 
 export default function Home() {
   return (
     <>
+      <Starfield />
       <Navbar />
       <main>
         <HeroSection />
@@ -19,6 +22,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingRobot />
       <ChatBot />
     </>
   );
