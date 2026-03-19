@@ -47,7 +47,7 @@ export default function ExperienceSection() {
           />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 auto-rows-fr">
           {/* Education */}
           <TiltCard>
           <motion.div

@@ -21,9 +21,9 @@ export default function FloatingRobot() {
       className="fixed right-0 bottom-16 z-40 pointer-events-auto hidden md:block"
     >
       {/* Outer container clips the bottom where watermark sits */}
-      <div className="w-[220px] h-[240px] overflow-hidden">
-        {/* Inner container is taller — pushes watermark below clip */}
-        <div className="w-[220px] h-[300px]">
+      <div className="w-[219px] h-[280px] overflow-hidden">
+        {/* Inner: taller to hide watermark, scaled down so robot fits with wave */}
+        <div className="w-[330px] h-[340px]" style={{ transform: "scale(1.0)", transformOrigin: "center top" }}>
           <Spline scene="https://prod.spline.design/HogCzYbhRvbwPROn/scene.splinecode" />
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ExternalLink, Github } from "lucide-react";
+import TypingEffect from "@/components/ui/TypingEffect";
 
 const HeroScene = dynamic(() => import("@/components/three/HeroScene"), {
   ssr: false,
@@ -145,7 +146,7 @@ export default function HeroSection() {
             </span>
           </motion.h1>
 
-          {/* Subtitle */}
+          {/* Subtitle with typing effect */}
           <motion.p
             initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -157,7 +158,17 @@ export default function HeroSection() {
             className="text-lg sm:text-xl text-text-secondary max-w-2xl lg:max-w-none mb-4 leading-relaxed"
           >
             <span className="text-text-primary font-semibold">
-              Full-stack & Multi-platform Developer
+              <TypingEffect
+                texts={[
+                  "Full-stack Developer",
+                  "Mobile App Developer",
+                  "AI/ML Enthusiast",
+                  "Multi-platform Developer",
+                ]}
+                typingSpeed={70}
+                deletingSpeed={40}
+                pauseDuration={2500}
+              />
             </span>{" "}
             crafting scalable Web, Mobile, and Desktop applications with modern
             technologies and AI integration.

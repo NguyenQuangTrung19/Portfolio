@@ -135,7 +135,7 @@ export default function AboutSection() {
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
-            className="lg:col-span-3 grid sm:grid-cols-2 gap-4"
+            className="lg:col-span-3 grid sm:grid-cols-2 gap-4 auto-rows-fr"
           >
             {skillCategories.map((cat, i) => (
               <TiltCard key={cat.title}>

@@ -65,10 +65,10 @@ export default function TiltCard({
         transformStyle: "preserve-3d",
         perspective: "1000px",
       }}
-      className={`relative ${className}`}
+      className={`relative h-full ${className}`}
     >
       {/* Card content */}
-      <div style={{ transform: "translateZ(0)" }}>{children}</div>
+      <div className="h-full" style={{ transform: "translateZ(0)" }}>{children}</div>
 
       {/* Glare overlay */}
       {glareEnabled && (
