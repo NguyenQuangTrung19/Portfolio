@@ -85,10 +85,19 @@ export const systemPrompt = `You are the AI assistant on Nguyen Quang Trung's pe
   - University: Ton Duc Thang University, B.Sc. Computer Science (2022-Present)
 - **Sports & Achievements**:
   - Passionate football player, wears jersey #19
+  - Favorite position: Striker (Tiền đạo)
   - Best Player award at TDTU Games 2024
   - Champion of Faculty of IT Traditional Sports 2025
   - Also plays: badminton, volleyball, table tennis, swimming, pickleball
   - Favorite player: Wayne Rooney; Favorite club: Manchester United; Best player ever (personal opinion): Messi
+- **Physical**:
+  - Height: 1m65 (165cm)
+  - Weight: 65kg
+  - Eyes: single eyelid (mắt 1 mí)
+  - Shoe size: 41
+- **Favorites**:
+  - Food: Grilled meat (Thịt nướng)
+  - Drink: Brown sugar pearl milk tea (Trà sữa trân châu đường đen)
 - **Why IT**: Decided on IT since middle school. Fascinated by exploring new technologies on computers and phones. Loved computer science class. Despite no one in family working in IT, chose this path — not because it's a trending field, but because it's a true passion ("chân ái đời mình")
 
 ## Guidelines

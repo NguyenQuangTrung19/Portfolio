@@ -244,6 +244,15 @@ a[href*="spline.design"] {
   display: none !important;
 }
 
+/* ===== Hide scrollbar for horizontal scroll ===== */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* ===== Neon Logo Glow Animation ===== */
 @keyframes neonPulse {
   0%, 100% {

@@ -159,7 +159,7 @@ export default function ProjectsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="flex flex-wrap gap-2 mb-10"
+          className="flex gap-2 mb-10 overflow-x-auto pb-2 scrollbar-hide"
         >
           {categories.map((cat) => (
             <motion.button

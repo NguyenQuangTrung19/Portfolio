@@ -6,13 +6,18 @@ export default function CustomCursor() {
   const glowRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(true); // default true to match SSR (render nothing)
   const mouse = useRef({ x: -100, y: -100 });
   const glowPos = useRef({ x: -100, y: -100 });
   const ringPos = useRef({ x: -100, y: -100 });
 
+  // Detect touch device on mount (client-only)
   useEffect(() => {
-    // Hide on mobile/touch devices
-    if ("ontouchstart" in window) return;
+    setIsTouchDevice("ontouchstart" in window);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) return;
 
     const onMouseMove = (e: MouseEvent) => {
       mouse.current = { x: e.clientX, y: e.clientY };
@@ -58,10 +63,10 @@ export default function CustomCursor() {
       document.removeEventListener("mouseleave", onMouseLeave);
       cancelAnimationFrame(animId);
     };
-  }, [isVisible]);
+  }, [isVisible, isTouchDevice]);
 
-  // Don't render on touch devices
-  if (typeof window !== "undefined" && "ontouchstart" in window) return null;
+  // Don't render on touch devices (after mount detection)
+  if (isTouchDevice) return null;
 
   return (
     <>
@@ -101,3 +106,4 @@ export default function CustomCursor() {
     </>
   );
 }
+
