@@ -50,14 +50,21 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo with neon glow + text */}
         <motion.a
           href="#home"
-          className="font-display text-lg font-bold tracking-tight"
-          whileHover={{ scale: 1.02 }}
+          className="flex items-center gap-3"
+          whileHover={{ scale: 1.05 }}
         >
-          <span className="gradient-text">NQT</span>
-          <span className="text-text-muted">.dev</span>
+          <img
+            src="/images/logo_neon.jpg"
+            alt="NQT Logo"
+            className="w-[60px] h-[60px] object-contain rounded-full neon-glow"
+          />
+          <div className="font-display text-lg font-bold tracking-tight">
+            <span className="gradient-text">NQT</span>
+            <span className="text-text-muted">.dev</span>
+          </div>
         </motion.a>
 
         {/* Desktop Nav */}
