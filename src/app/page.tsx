@@ -12,6 +12,7 @@ import GlobalBackground from "@/components/ui/GlobalBackground";
 import CustomCursor from "@/components/ui/CustomCursor";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import SectionDivider from "@/components/ui/SectionDivider";
+import BackgroundMusic from "@/components/ui/BackgroundMusic";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <Footer />
       <FloatingRobot />
       <FloatingCharacter />
+      <BackgroundMusic />
       <ChatBot />
     </>
   );
