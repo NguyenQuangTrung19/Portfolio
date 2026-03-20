@@ -68,6 +68,11 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="min-h-screen bg-bg-primary text-text-primary antialiased">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `history.scrollRestoration = 'manual'; window.scrollTo(0, 0);`,
+          }}
+        />
         {children}
         <Analytics />
       </body>
