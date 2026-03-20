@@ -2,7 +2,7 @@
 
 A personal portfolio website featuring immersive 3D elements, an AI-powered chatbot, and a stunning Deep Space theme. Built with cutting-edge web technologies to showcase projects, skills, and experience.
 
-🌐 **Live Demo**: [nqt-dev.vercel.app](https://nqt-dev.vercel.app)
+🌐 **Live Demo**: [https://portfolio-tau-taupe-24.vercel.app/](https://portfolio-tau-taupe-24.vercel.app/)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
@@ -146,7 +146,7 @@ This project is deployed on **Vercel**:
 ## 👤 Author
 
 **Nguyen Quang Trung**
-- 🌐 Portfolio: [nqt-dev.vercel.app](https://nqt-dev.vercel.app)
+- 🌐 Portfolio: [nqt-dev.vercel.app](https://portfolio-tau-taupe-24.vercel.app/)
 - 📧 Email: nqt123456123@gmail.com
 - 🐙 GitHub: [@NguyenQuangTrung19](https://github.com/NguyenQuangTrung19)
 - 💼 LinkedIn: [Nguyen Quang Trung](https://linkedin.com/in/nguyễn-quang-trung-178a2737a)

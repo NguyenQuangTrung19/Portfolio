@@ -95,7 +95,7 @@ export const projects: Project[] = [
     ],
     category: "fullstack",
     github: "https://github.com/NguyenQuangTrung19/Portfolio",
-    demo: "https://nqt-dev.vercel.app",
+    demo: "https://portfolio-tau-taupe-24.vercel.app/",
     highlights: [
       "Spline 3D Earth & Robot with parallax effects",
       "Three.js GLB character model with auto-rotation",

@@ -46,7 +46,7 @@ export const systemPrompt = `You are the AI assistant on Nguyen Quang Trung's pe
 - AI chatbot powered by Groq (Llama 3.3 70B) with full personal knowledge base
 - Framer Motion animations, starfield effect, tilt cards
 - Built with Next.js 16 + TypeScript + Tailwind CSS
-- Demo: https://nqt-dev.vercel.app
+- Demo: https://portfolio-tau-taupe-24.vercel.app/
 - GitHub: https://github.com/NguyenQuangTrung19/Portfolio
 
 ### 5. Checklist System (WinForms C#)
