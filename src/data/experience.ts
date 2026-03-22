@@ -39,8 +39,57 @@ export const languages = [
   { name: "Vietnamese", level: "Native" },
 ];
 
-export const activities = [
-  "Completed a 3-month specialized training course in Taiwan",
-  "Passionate about travel and charity",
-  "Proficient in football and badminton",
+export interface Activity {
+  icon: string;
+  title: string;
+  subtitle: string;
+  highlights: string[];
+  color: string;
+  bgColor: string;
+  emoji: string;
+}
+
+export const activities: Activity[] = [
+  {
+    icon: "GraduationCap",
+    title: "Taiwan IT Training",
+    subtitle: "Chinese Culture University — 3-month exchange program",
+    emoji: "🇹🇼",
+    highlights: [
+      "Completed 2D/3D game programming projects",
+      "Built AR storytelling experience & AR Book",
+      "Won Outstanding Student Award of the training course",
+      "Selective exchange program for top-performing students",
+    ],
+    color: "text-teal-400",
+    bgColor: "bg-teal-400/10",
+  },
+  {
+    icon: "Plane",
+    title: "Travel & Volunteering",
+    subtitle: "Exploring Vietnam & giving back to communities",
+    emoji: "✈️",
+    highlights: [
+      "Traveled ~75% of Vietnam's provinces",
+      "Actively participates in volunteer campaigns",
+      "Travel fuels creativity and broadens perspective",
+      "Passionate about discovering new cultures & places",
+    ],
+    color: "text-accent-warm",
+    bgColor: "bg-accent-warm/10",
+  },
+  {
+    icon: "Trophy",
+    title: "Sports & Athletics",
+    subtitle: "Football lover • Jersey #19 • Striker",
+    emoji: "⚽",
+    highlights: [
+      "Best Player — TDTU Games 2024",
+      "Champion — IT Faculty Traditional Sports 2025",
+      "Plays: badminton, volleyball, table tennis, swimming, pickleball",
+      "Fan of Wayne Rooney • Manchester United • GOAT: Messi",
+    ],
+    color: "text-amber-400",
+    bgColor: "bg-amber-400/10",
+  },
 ];

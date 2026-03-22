@@ -82,7 +82,7 @@ export default function LoadingScreen() {
             className="relative mb-10"
           >
             <span className="text-3xl font-display font-bold">
-              <span className="gradient-text animate-gradient">NQT</span>
+              <span className="gradient-text animate-gradient">NguyenQuangTrung</span>
               <span className="text-text-secondary">.dev</span>
             </span>
           </motion.div>

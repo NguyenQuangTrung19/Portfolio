@@ -1,4 +1,4 @@
-# 🚀 NQT.dev — 3D Interactive Portfolio
+# 🚀 NguyenQuangTrung.dev — 3D Interactive Portfolio
 
 A personal portfolio website featuring immersive 3D elements, an AI-powered chatbot, and a stunning Deep Space theme. Built with cutting-edge web technologies to showcase projects, skills, and experience.
 

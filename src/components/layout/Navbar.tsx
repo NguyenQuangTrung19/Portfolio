@@ -91,7 +91,7 @@ export default function Navbar() {
             className="w-9 h-9 md:w-[60px] md:h-[60px] object-contain rounded-full neon-glow"
           />
           <div className="font-display text-base md:text-lg font-bold tracking-tight">
-            <span className="gradient-text">NQT</span>
+            <span className="gradient-text">NguyenQuangTrung</span>
             <span className="text-text-muted">.dev</span>
           </div>
         </motion.a>

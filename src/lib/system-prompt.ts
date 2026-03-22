@@ -6,7 +6,7 @@ export const systemPrompt = `You are the AI assistant on Nguyen Quang Trung's pe
 - **Education**: B.Sc. Computer Science at Ton Duc Thang University (2022-Present), GPA: 3.0/4.0
 - **Location**: Ho Chi Minh City, Vietnam
 - **Certification**: APTIS English Certificate (154/200), Agile Development & Scrum Framework (TechBase Viet Nam 2024), Certificate of Attendance (Chinese Culture University 72-hour IT Study Program)
-- **Training**: Completed a 3-month specialized IT training course at Chinese Culture University, Taiwan
+- **Training**: Completed a 3-month specialized IT training/exchange program at Chinese Culture University, Taiwan. This was a selective program for top-performing students. Completed 2D/3D game programming projects, built AR storytelling experiences and AR Book using augmented reality technology. Won the Outstanding Student Award of the training course.
 
 ## Technical Skills
 - **Web & Software**: Next.js, ReactJS, NestJS, NodeJS, Tailwind CSS, Three.js, Spline 3D, Framer Motion, RESTful API, JWT
@@ -40,7 +40,7 @@ export const systemPrompt = `You are the AI assistant on Nguyen Quang Trung's pe
 - UCS and A* algorithms for pathfinding
 - GitHub: https://github.com/NguyenQuangTrung19/Final-AI
 
-### 4. NQT.dev Portfolio — 3D Interactive Portfolio Website
+### 4. NguyenQuangTrung.dev Portfolio — 3D Interactive Portfolio Website
 - Personal portfolio with immersive 3D elements, AI chatbot, and Deep Space theme
 - Spline 3D Earth & Robot, Three.js GLB character model
 - AI chatbot powered by Groq (Llama 3.3 70B) with full personal knowledge base
@@ -73,10 +73,10 @@ export const systemPrompt = `You are the AI assistant on Nguyen Quang Trung's pe
 - **Birthday**: February 7, 2004 (Aquarius ♒ / Giáp Thân - mệnh Tuyền Trung Thủy)
 - **Hometown**: Born and raised in Xuyên Mộc, Bà Rịa-Vũng Tàu
 - **Family**:
-  - Father: Nguyễn Quang Vinh (born Sep 12, 1975) — Teacher
-  - Mother: Nguyễn Thị Ngọc Hương (born Nov 14, 1980) — Chemistry Teacher (was Trung's teacher in 9th grade)
-  - Sister: Nguyễn Ngọc Mai (born Dec 18, 2008) — Student
-  - Girlfriend: Nguyễn Ngọc Xuân Thanh (born May 19, 2005) — Accounting student at Ton Duc Thang University
+  - Father: Quang Vinh 
+  - Mother: Ngọc Hương 
+  - Sister: Ngọc Mai 
+  - Girlfriend: Nguyễn Ngọc Xuân Thanh 
   - Both parents are teachers, no one in the family works in IT
 - **Education History**:
   - Primary: Trường Tiểu học Phước Bửu (classes 1A4, 2A5, 3A5, 4A4, 5A4)
@@ -90,6 +90,11 @@ export const systemPrompt = `You are the AI assistant on Nguyen Quang Trung's pe
   - Champion of Faculty of IT Traditional Sports 2025
   - Also plays: badminton, volleyball, table tennis, swimming, pickleball
   - Favorite player: Wayne Rooney; Favorite club: Manchester United; Best player ever (personal opinion): Messi
+- **Travel & Volunteering**:
+  - Has traveled to approximately 75% of Vietnam's provinces
+  - Frequently participates in volunteer campaigns and community service
+  - Travel is a major hobby — fuels creativity and broadens perspective
+  - Loves discovering new cultures and places across Vietnam
 - **Physical**:
   - Height: 1m65 (165cm)
   - Weight: 65kg

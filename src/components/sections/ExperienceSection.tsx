@@ -174,7 +174,7 @@ export default function ExperienceSection() {
           </motion.div>
           </TiltCard>
 
-          {/* Activities */}
+          {/* Activities & Interests */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -186,7 +186,7 @@ export default function ExperienceSection() {
             }}
             className="md:col-span-2 glass-card p-6 sm:p-8"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-8">
               <motion.div
                 initial={{ scale: 0, rotate: -90 }}
                 whileInView={{ scale: 1, rotate: 0 }}
@@ -211,38 +211,98 @@ export default function ExperienceSection() {
                 hidden: { opacity: 0 },
                 visible: {
                   opacity: 1,
-                  transition: { staggerChildren: 0.12, delayChildren: 0.4 },
+                  transition: { staggerChildren: 0.15, delayChildren: 0.4 },
                 },
               }}
               initial="hidden"
               whileInView="visible"
               viewport={viewport}
-              className="grid sm:grid-cols-3 gap-4"
+              className="grid sm:grid-cols-3 gap-5"
             >
               {activities.map((activity, i) => (
-                <motion.div
-                  key={i}
-                  variants={{
-                    hidden: { opacity: 0, y: 30, scale: 0.9 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      scale: 1,
-                      transition: {
-                        duration: 0.5,
-                        ease: [0.16, 1, 0.3, 1],
+                <TiltCard key={activity.title}>
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0, y: 30, scale: 0.92 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        transition: {
+                          duration: 0.6,
+                          ease: [0.16, 1, 0.3, 1],
+                        },
                       },
-                    },
-                  }}
-                  whileHover={{
-                    y: -3,
-                    borderColor: "rgba(108, 92, 231, 0.3)",
-                    transition: { duration: 0.2 },
-                  }}
-                  className="p-4 rounded-lg border border-border-subtle bg-bg-primary/30 text-sm text-text-secondary cursor-default"
-                >
-                  {activity}
-                </motion.div>
+                    }}
+                    whileHover={{
+                      y: -5,
+                      transition: { duration: 0.25 },
+                    }}
+                    className="group h-full p-5 rounded-xl border border-border-subtle bg-bg-primary/40 backdrop-blur-sm cursor-default transition-colors hover:border-[color:var(--hover-border)]"
+                    style={{
+                      "--hover-border":
+                        i === 0
+                          ? "rgba(45, 212, 191, 0.35)"
+                          : i === 1
+                            ? "rgba(251, 146, 60, 0.35)"
+                            : "rgba(251, 191, 36, 0.35)",
+                    } as React.CSSProperties}
+                  >
+                    {/* Card Header */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <motion.span
+                        className="text-2xl"
+                        whileHover={{ scale: 1.2, rotate: [0, -8, 8, 0] }}
+                        transition={{ duration: 0.4 }}
+                      >
+                        {activity.emoji}
+                      </motion.span>
+                      <div className="min-w-0">
+                        <h4 className={`text-sm font-semibold ${activity.color}`}>
+                          {activity.title}
+                        </h4>
+                        <p className="text-[11px] text-text-muted leading-tight mt-0.5 line-clamp-2">
+                          {activity.subtitle}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Separator */}
+                    <div className={`h-px w-full mb-4 opacity-20 bg-gradient-to-r ${
+                      i === 0
+                        ? "from-teal-400 to-transparent"
+                        : i === 1
+                          ? "from-orange-400 to-transparent"
+                          : "from-amber-400 to-transparent"
+                    }`} />
+
+                    {/* Highlights */}
+                    <ul className="space-y-2.5">
+                      {activity.highlights.map((highlight, hi) => (
+                        <motion.li
+                          key={hi}
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            delay: 0.6 + i * 0.15 + hi * 0.08,
+                            duration: 0.4,
+                          }}
+                          className="flex items-start gap-2 text-xs text-text-secondary leading-relaxed"
+                        >
+                          <span className={`mt-1 w-1.5 h-1.5 rounded-full shrink-0 ${
+                            i === 0
+                              ? "bg-teal-400/60"
+                              : i === 1
+                                ? "bg-orange-400/60"
+                                : "bg-amber-400/60"
+                          }`} />
+                          {highlight}
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </TiltCard>
               ))}
             </motion.div>
           </motion.div>

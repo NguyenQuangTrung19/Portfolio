@@ -79,7 +79,7 @@ export const projects: Project[] = [
   },
   {
     id: "portfolio",
-    title: "NQT.dev Portfolio",
+    title: "NguyenQuangTrung.dev Portfolio",
     subtitle: "3D Interactive Portfolio Website",
     description:
       "Personal portfolio website with immersive 3D elements, AI-powered chatbot, and stunning space theme. Features Spline 3D scenes, Three.js character models, and smooth animations.",

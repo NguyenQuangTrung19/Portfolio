@@ -17,18 +17,39 @@ export default function BackgroundMusic() {
     const audio = new Audio(MUSIC_SRC);
     audio.loop = true;
     audio.volume = DEFAULT_VOLUME;
-    audio.preload = "none";
+    audio.preload = "auto";
     audioRef.current = audio;
 
     // Sync state if audio ends unexpectedly
     audio.addEventListener("pause", () => setIsPlaying(false));
     audio.addEventListener("play", () => setIsPlaying(true));
 
+    // Auto-play on first user interaction (browsers block autoplay before interaction)
+    const autoPlay = () => {
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      }
+      // Remove all listeners after first successful interaction
+      window.removeEventListener("click", autoPlay);
+      window.removeEventListener("scroll", autoPlay);
+      window.removeEventListener("keydown", autoPlay);
+      window.removeEventListener("touchstart", autoPlay);
+    };
+
+    window.addEventListener("click", autoPlay, { once: false });
+    window.addEventListener("scroll", autoPlay, { once: false });
+    window.addEventListener("keydown", autoPlay, { once: false });
+    window.addEventListener("touchstart", autoPlay, { once: false });
+
     return () => {
       audio.pause();
       audio.removeEventListener("pause", () => setIsPlaying(false));
       audio.removeEventListener("play", () => setIsPlaying(true));
       audio.src = "";
+      window.removeEventListener("click", autoPlay);
+      window.removeEventListener("scroll", autoPlay);
+      window.removeEventListener("keydown", autoPlay);
+      window.removeEventListener("touchstart", autoPlay);
     };
   }, []);
 
